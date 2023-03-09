@@ -4,6 +4,7 @@ from .models import *
 # Register your models here.
 
 admin.site.register(Country)
+admin.site.register(Region)
 admin.site.register(Designation)
 admin.site.register(ProductCategory)
 admin.site.register(OtherBuissness)
