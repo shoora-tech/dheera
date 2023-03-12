@@ -113,5 +113,9 @@ class StuffMaster(UUIDModel):
     pr = models.ForeignKey(PR, on_delete=models.CASCADE, related_name="stuff_master")
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE, related_name="stuff_master")
     pattern = models.ForeignKey(Pattern, on_delete=models.CASCADE, related_name="stuff_master")
+    stuff_type = models.ForeignKey(StuffType, on_delete=models.CASCADE, related_name="stuff_master", null=True)
     container_type = models.ForeignKey(ContainerType, on_delete=models.CASCADE, related_name="stuff_master")
     stuff = models.FloatField()
+
+    def __str__(self):
+        return str(self.stuff)

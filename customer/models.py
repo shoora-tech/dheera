@@ -94,3 +94,6 @@ class Customer(UUIDModel):
     # smr_recommendation_reason = models.ManyToManyField(SMRecomendationreason)
     aj_remarks = models.TextField(null=True, blank=True)
     ceo_remarks = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.company_name
